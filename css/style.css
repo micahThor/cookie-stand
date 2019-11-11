@@ -1,0 +1,21 @@
+header {
+  background-color:  #008c76ff;
+}
+
+header h1 {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-family: 'Abril Fatface', cursive;
+  color: #fa9d9d;
+}
+
+#logo {
+  display: inline-block;
+  position: absolute;
+  max-width: 300px;
+}
+
+body {
+  background-color: #ffd1d1;
+}
