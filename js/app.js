@@ -1,6 +1,6 @@
 'use strict';
 
-function randomCookies(min, max, sale) {
+function setRandomCookies(min, max, sale) {
   return Math.ceil(Math.floor(Math.random() * (max - min + 1) + min) * sale);
 }
 
@@ -9,8 +9,8 @@ var seattle = {
   maxCustomer: 65,
   avgSale: 6.3,
 
-  randomCookies: function () {
-    return randomCookies(this.minCustomer, this.maxCustomer, this.avgSale);
+  getRandomCookies: function () {
+    return setRandomCookies(this.minCustomer, this.maxCustomer, this.avgSale);
   }
 }
 
@@ -19,8 +19,8 @@ var tokyo = {
   maxCustomer: 24,
   avgSale: 1.2,
 
-  randomCookies: function () {
-    return randomCookies(this.minCustomer, this.maxCustomer, this.avgSale);
+  getRandomCookies: function () {
+    return setRandomCookies(this.minCustomer, this.maxCustomer, this.avgSale);
   }
 }
 
@@ -29,8 +29,8 @@ var dubai = {
   maxCustomer: 38,
   avgSale: 3.7,
 
-  randomCookies: function () {
-    return randomCookies(this.minCustomer, this.maxCustomer, this.avgSale);
+  getRandomCookies: function () {
+    return setRandomCookies(this.minCustomer, this.maxCustomer, this.avgSale);
   }
 }
 
@@ -39,8 +39,8 @@ var paris = {
   maxCustomer: 38,
   avgSale: 2.3,
 
-  randomCookies: function () {
-    return randomCookies(this.minCustomer, this.maxCustomer, this.avgSale);
+  getRandomCookies: function () {
+    return setRandomCookies(this.minCustomer, this.maxCustomer, this.avgSale);
   }
 }
 
@@ -49,8 +49,8 @@ var lima = {
   maxCustomer: 16,
   avgSale: 4.6,
 
-  randomCookies: function () {
-    return randomCookies(this.minCustomer, this.maxCustomer, this.avgSale);
+  getRandomCookies: function () {
+    return setRandomCookies(this.minCustomer, this.maxCustomer, this.avgSale);
   }
 }
 
@@ -79,7 +79,7 @@ for (var i = 0, totalCookiesPerDay = 0; i < locationObjects.length; i++ , totalC
   // gets cookie sales for each hour and adds cookie amount to li elements
   for (var j = 0; j < hours.length; j++) {
     // get cookie sale and add to total
-    cookieAmountPerHour = locationObjects[i].randomCookies()
+    cookieAmountPerHour = locationObjects[i].getRandomCookies()
     totalCookiesPerDay += cookieAmountPerHour;
     // generate list item and add cookie data at specified time
     liElement = document.createElement('li');
@@ -87,7 +87,7 @@ for (var i = 0, totalCookiesPerDay = 0; i < locationObjects.length; i++ , totalC
     ulElement.appendChild(liElement);
   }
   
-  // generate list item and add cookie data at specified time
+  // generate list item and add cookie total for a location
   liElement = document.createElement('li');
   liElement.textContent = `Total  : ${totalCookiesPerDay}`;
   ulElement.appendChild(liElement);
