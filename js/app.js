@@ -56,28 +56,35 @@ var lima = {
 
 
 // arrays section
-var locations = [seattle, tokyo, dubai, paris, lima];
+var locationObjects = [seattle, tokyo, dubai, paris, lima];
+var locationElementId = ['seattle', 'tokyo', 'dubai', 'paris', 'lima'];
 var hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM',
   '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM'];
 
-// create html list elements
-var parentElement = document.getElementById('salesFigures');
-var ulElement = document.createElement('ul');
-parentElement.appendChild(ulElement);
+
+// loop variables
+var parentElement;
+var ulElement;
 var liElement;
 
 // calculates sales per hour for every location and adds to html list tags
 // renders on sales.html page
-for (var i = 0, totalCookies = 0; i < locations.length; i++ , totalCookies = 0) {
+for (var i = 0, totalCookies = 0; i < locationObjects.length; i++ , totalCookies = 0) {
+  // create html list elements for location
+  parentElement = document.getElementById(locationElementId[i]);
+  ulElement = document.createElement('ul');
+  parentElement.appendChild(ulElement);
+
   for (var j = 0; j < hours.length; j++) {
     // get cookie sale and add to total
-    var cookieAmount = locations[i].randomCookies()
+    var cookieAmount = locationObjects[i].randomCookies()
     totalCookies += cookieAmount;
     // generate list item and add cookie data at specified time
     liElement = document.createElement('li');
     liElement.textContent = `${hours[j]}  : ${cookieAmount}`;
     ulElement.appendChild(liElement);
   }
+  
   // generate list item and add cookie data at specified time
   liElement = document.createElement('li');
   liElement.textContent = `Total  : ${totalCookies}`;
