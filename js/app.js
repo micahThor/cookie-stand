@@ -1,7 +1,7 @@
 'use strict';
 
 function randomCookies(min, max, sale) {
-  return Math.floor(Math.random() * (max - min + 1) + min) * sale;
+  return Math.ceil(Math.floor(Math.random() * (max - min + 1) + min) * sale);
 }
 
 var seattle = {
@@ -10,47 +10,47 @@ var seattle = {
   avgSale: 6.3,
 
   randomCookies: function () {
-    return Math.ceil(randomCookies(this.minCustomer, this.maxCustomer, this.avgSale));
+    return randomCookies(this.minCustomer, this.maxCustomer, this.avgSale);
   }
 }
 
 var tokyo = {
-  minCustomer: 23,
-  maxCustomer: 65,
-  avgSale: 6.3,
+  minCustomer: 3,
+  maxCustomer: 24,
+  avgSale: 1.2,
 
   randomCookies: function () {
-    return Math.ceil(randomCookies(this.minCustomer, this.maxCustomer, this.avgSale));
+    return randomCookies(this.minCustomer, this.maxCustomer, this.avgSale);
   }
 }
 
 var dubai = {
-  minCustomer: 23,
-  maxCustomer: 65,
-  avgSale: 6.3,
+  minCustomer: 11,
+  maxCustomer: 38,
+  avgSale: 3.7,
 
   randomCookies: function () {
-    return Math.ceil(randomCookies(this.minCustomer, this.maxCustomer, this.avgSale));
+    return randomCookies(this.minCustomer, this.maxCustomer, this.avgSale);
   }
 }
 
 var paris = {
-  minCustomer: 23,
-  maxCustomer: 65,
-  avgSale: 6.3,
+  minCustomer: 20,
+  maxCustomer: 38,
+  avgSale: 2.3,
 
   randomCookies: function () {
-    return Math.ceil(randomCookies(this.minCustomer, this.maxCustomer, this.avgSale));
+    return randomCookies(this.minCustomer, this.maxCustomer, this.avgSale);
   }
 }
 
 var lima = {
-  minCustomer: 23,
-  maxCustomer: 65,
-  avgSale: 6.3,
+  minCustomer: 2,
+  maxCustomer: 16,
+  avgSale: 4.6,
 
   randomCookies: function () {
-    return Math.ceil(randomCookies(this.minCustomer, this.maxCustomer, this.avgSale));
+    return randomCookies(this.minCustomer, this.maxCustomer, this.avgSale);
   }
 }
 
