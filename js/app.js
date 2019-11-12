@@ -67,14 +67,15 @@ var parentElement;
 var ulElement;
 var liElement;
 
-// calculates sales per hour for every location and adds to html list tags
+// calculates cookie sales per hour for every location and adds to html list tags
 // renders on sales.html page
+// create html list elements for each location
 for (var i = 0, totalCookies = 0; i < locationObjects.length; i++ , totalCookies = 0) {
-  // create html list elements for location
   parentElement = document.getElementById(locationElementId[i]);
   ulElement = document.createElement('ul');
   parentElement.appendChild(ulElement);
 
+  // gets cookie sales for each hour and adds cookie amount to li elements
   for (var j = 0; j < hours.length; j++) {
     // get cookie sale and add to total
     var cookieAmount = locationObjects[i].randomCookies()
