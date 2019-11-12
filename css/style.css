@@ -3,16 +3,20 @@ head {
 }
 
 header {
-  margin-top: 30px;
+  margin-top: 40px;
   background-color:  #EFE7BC;
   height: 175px;
   border-radius: 25px;
+  margin-left: 20%;
+  margin-right: 20%;
+  box-shadow: 15px 15px #74BDCB;
+  border-radius: 30x;
 }
 
-header h1 {
+header h2 {
   position: absolute;
   z-index: 1;
-  left: 20%;
+  left: 25%;
   right:25%;
   top: 50px;
   height: 100px;
@@ -27,12 +31,25 @@ header h1 {
   position: absolute;
   top: 0;
   right: 25%;
-  left: 25%;
+  left: 27%;
   opacity: 80%;
 }
 
 body {
   background-color: #A3CBF1;
+}
+
+body h1 {
+  
+  margin-top: 15px;
+  margin-bottom: 0px;
+  left: 25%;
+  right: 25%;
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+  font-size: 80px;
+  color: #fa9d9d;
 }
 
 article.location {
