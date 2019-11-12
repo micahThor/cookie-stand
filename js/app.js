@@ -64,6 +64,7 @@ var hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM',
 var parentElement = document.getElementById('salesFigures');
 var ulElement = document.createElement('ul');
 parentElement.appendChild(ulElement);
+var liElement;
 
 // calculates sales per hour for every location and adds to html list tags
 // renders on sales.html page
@@ -73,12 +74,12 @@ for (var i = 0, totalCookies = 0; i < locations.length; i++ , totalCookies = 0) 
     var cookieAmount = locations[i].randomCookies()
     totalCookies += cookieAmount;
     // generate list item and add cookie data at specified time
-    var liElement = document.createElement('li');
+    liElement = document.createElement('li');
     liElement.textContent = `${hours[j]}  : ${cookieAmount}`;
     ulElement.appendChild(liElement);
   }
   // generate list item and add cookie data at specified time
-  var liElement = document.createElement('li');
+  liElement = document.createElement('li');
   liElement.textContent = `Total  : ${totalCookies}`;
   ulElement.appendChild(liElement);
 
