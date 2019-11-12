@@ -5,12 +5,15 @@ head {
 header {
   margin-top: 40px;
   background-color:  #EFE7BC;
-  height: 175px;
+  height: 200px;
   border-radius: 25px;
   margin-left: 20%;
   margin-right: 20%;
   box-shadow: 15px 15px #74BDCB;
-  border-radius: 30x;
+  border-radius: 80%;
+  z-index: -1;
+  border-style: solid;
+  border-width: 2px;
 }
 
 header h2 {
@@ -22,7 +25,7 @@ header h2 {
   height: 100px;
   text-align: center;
   font-family: 'Abril Fatface', cursive;
-  text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+  text-shadow: -1px 0 #EFE7BC, 0 5px #EFE7BC, 2px 0 #EFE7BC, 0 -1px #EFE7BC;
   font-size: 60px;
   color: #fa9d9d;
 }
@@ -32,7 +35,6 @@ header h2 {
   top: 0;
   right: 25%;
   left: 27%;
-  opacity: 80%;
 }
 
 body {
@@ -40,14 +42,13 @@ body {
 }
 
 body h1 {
-  
   margin-top: 15px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   left: 25%;
   right: 25%;
   text-align: center;
   font-family: 'Abril Fatface', cursive;
-  text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+  text-shadow: -1px 0 #EFE7BC, 0 5px #EFE7BC, 2px 0 #EFE7BC, 0 -1px #EFE7BC;
   font-size: 80px;
   color: #fa9d9d;
 }
@@ -56,12 +57,19 @@ article.location {
   display: inline-block;
   margin-left: 10px;
   width: 18%;
-  padding: 5px;
-  border: 3px solid  #EFE7BC;    
-  background-color: #fa9d9d; 
+  padding: 5px;   
+  background-color: #fa9d9d;
 }
 
 article h3 {
+  margin-left: 20%;
+  margin-right: 20%;
+  color:  #EFE7BC;
+  font-size: 25px;
   text-align: center;
   background-color:#74BDCB;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
 }
