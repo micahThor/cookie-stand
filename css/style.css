@@ -1,5 +1,5 @@
 header {
-  background-color:  #008c76ff;
+  background-color:  #EFE7BC;
 }
 
 header h1 {
@@ -7,7 +7,7 @@ header h1 {
   text-align: center;
   width: 100%;
   font-family: 'Abril Fatface', cursive;
-  color: #fa9d9d;
+  color: #FB7374;
 }
 
 #logo {
@@ -17,15 +17,19 @@ header h1 {
 }
 
 body {
-  background-color: #ffd1d1;
+  background-color: #A3CBF1;
 }
 
-
-span.location {
+article.location {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  margin-left: 10px;
+  width: 18%;
   padding: 5px;
-  border: 1px solid blue;    
-  background-color: yellow; 
+  border: 3px solid  #EFE7BC;    
+  background-color: #fa9d9d; 
+}
+
+article h3 {
+  text-align: center;
+  background-color:#74BDCB;
 }
