@@ -66,11 +66,12 @@ var hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM',
 var parentElement;
 var ulElement;
 var liElement;
+var cookieAmountPerHour;
 
 // calculates cookie sales per hour for every location and adds to html list tags
 // renders on sales.html page
 // create html list elements for each location
-for (var i = 0, totalCookies = 0; i < locationObjects.length; i++ , totalCookies = 0) {
+for (var i = 0, totalCookiesPerDay = 0; i < locationObjects.length; i++ , totalCookiesPerDay = 0) {
   parentElement = document.getElementById(locationElementId[i]);
   ulElement = document.createElement('ul');
   parentElement.appendChild(ulElement);
@@ -78,17 +79,17 @@ for (var i = 0, totalCookies = 0; i < locationObjects.length; i++ , totalCookies
   // gets cookie sales for each hour and adds cookie amount to li elements
   for (var j = 0; j < hours.length; j++) {
     // get cookie sale and add to total
-    var cookieAmount = locationObjects[i].randomCookies()
-    totalCookies += cookieAmount;
+    cookieAmountPerHour = locationObjects[i].randomCookies()
+    totalCookiesPerDay += cookieAmountPerHour;
     // generate list item and add cookie data at specified time
     liElement = document.createElement('li');
-    liElement.textContent = `${hours[j]}  : ${cookieAmount}`;
+    liElement.textContent = `${hours[j]}  : ${cookieAmountPerHour}`;
     ulElement.appendChild(liElement);
   }
   
   // generate list item and add cookie data at specified time
   liElement = document.createElement('li');
-  liElement.textContent = `Total  : ${totalCookies}`;
+  liElement.textContent = `Total  : ${totalCookiesPerDay}`;
   ulElement.appendChild(liElement);
 
 }
