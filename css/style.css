@@ -38,7 +38,7 @@ header h2 {
 }
 
 body {
-  background-color: #A3CBF1;
+  background-color: #fa9d9d;
 }
 
 body h1 {
@@ -48,17 +48,18 @@ body h1 {
   right: 25%;
   text-align: center;
   font-family: 'Abril Fatface', cursive;
-  text-shadow: -1px 0 #EFE7BC, 0 5px #EFE7BC, 2px 0 #EFE7BC, 0 -1px #EFE7BC;
+  text-shadow: -1px 0 #A3CBF1, 0 5px #A3CBF1, 2px 0 #A3CBF1, 0 -1px #A3CBF1;
   font-size: 80px;
-  color: #fa9d9d;
+  color: #EFE7BC;
 }
 
 article.location {
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
   width: 18%;
   padding: 5px;   
-  background-color: #fa9d9d;
+  background-color: #A3CBF1;
   border-radius: 5%;
   box-shadow: 8px 8px #74BDCB;
   border-style: solid;
