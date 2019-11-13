@@ -52,3 +52,15 @@ body h1 {
   font-size: 80px;
   color: #EFE7BC;
 }
+
+table {
+  background: #A3CBF1;
+  table-layout: auto;
+  width: 100%; 
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #EFE7BC;
+}
