@@ -53,16 +53,16 @@ BakeryLocationManager.prototype.renderSalesData = function () {
   // create table element
   var tableElement = this.addElement('table', parentElement);
   // create table header of sales hours
-  this.renderHourHeader(tableElement);
+  this.renderTableHeader(tableElement);
   // create table data for each location
-  this.renderSalesDataForLocation(tableElement);
+  this.renderTableBody(tableElement);
   // create table footer for total cookies per hour
-  this.renderCookieTotalPerHour(tableElement);
+  this.renderTableFooter(tableElement);
 }
 
 // function creates a table header for sales data table.  Displays an hour in each cell
 // acts as the header of the table
-BakeryLocationManager.prototype.renderHourHeader = function (parentElement) {
+BakeryLocationManager.prototype.renderTableHeader = function (parentElement) {
   // create table row
   var tableHeadElement = this.addElement('thead', parentElement);
   var rowElement = this.addElement('tr', tableHeadElement);
@@ -78,7 +78,7 @@ BakeryLocationManager.prototype.renderHourHeader = function (parentElement) {
 
 // function creates cookie sales figures for sales data table.  Displays amount of cookies sold in an hour
 // acts as the content of the table
-BakeryLocationManager.prototype.renderSalesDataForLocation = function (parentElement) {
+BakeryLocationManager.prototype.renderTableBody = function (parentElement) {
   // loop variables
   var rowElement;
   var randomCookieAmt;
@@ -106,7 +106,7 @@ BakeryLocationManager.prototype.renderSalesDataForLocation = function (parentEle
 
 // function creates total sales figures for each hour.  Displays total to table
 // Acts as the footer of the table
-BakeryLocationManager.prototype.renderCookieTotalPerHour = function (parentElement) {
+BakeryLocationManager.prototype.renderTableFooter = function (parentElement) {
   // loop variables
   var cookieCountPerHour = 0;
 
