@@ -61,9 +61,11 @@ BakeryLocationManager.prototype.renderSalesData = function () {
 }
 
 // function creates a table header for sales data table.  Displays an hour in each cell
+// acts as the header of the table
 BakeryLocationManager.prototype.renderHourHeader = function (parentElement) {
   // create table row
-  var rowElement = this.addElement('tr', parentElement);
+  var tableHeadElement = this.addElement('thead', parentElement);
+  var rowElement = this.addElement('tr', tableHeadElement);
   // create empty cell at upper right of table
   this.addElement('th', rowElement);
   // creates table header for every hour location is open
@@ -75,16 +77,19 @@ BakeryLocationManager.prototype.renderHourHeader = function (parentElement) {
 }
 
 // function creates cookie sales figures for sales data table.  Displays amount of cookies sold in an hour
+// acts as the content of the table
 BakeryLocationManager.prototype.renderSalesDataForLocation = function (parentElement) {
   // loop variables
   var rowElement;
   var randomCookieAmt;
   var cookieCounterPerLocation = 0;
 
+  var tableBodyElement = this.addElement('tbody', parentElement);
+
   // populate each row with cell data for each location
   for (var location = 0; location < this.locationList.length; location++ , cookieCounterPerLocation = 0) {
     // create table row for each location
-    rowElement = this.addElement('tr', parentElement);
+    rowElement = this.addElement('tr', tableBodyElement);
     this.addElement('th', rowElement, this.locationList[location].name);
 
     // create table cell data for each hour for cookies sold
@@ -100,12 +105,14 @@ BakeryLocationManager.prototype.renderSalesDataForLocation = function (parentEle
 }
 
 // function creates total sales figures for each hour.  Displays total to table
+// Acts as the footer of the table
 BakeryLocationManager.prototype.renderCookieTotalPerHour = function (parentElement) {
   // loop variables
   var cookieCountPerHour = 0;
 
-  // create row element and add to parent
-  var rowElement = this.addElement('tr', parentElement);
+  // create tfoot and row element and add to parent
+  var tableFootElement = this.addElement('tfoot', parentElement);
+  var rowElement = this.addElement('tr', tableFootElement);
   // create heading for total cookie
   this.addElement('th', rowElement, 'Totals');
 
