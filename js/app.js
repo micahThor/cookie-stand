@@ -90,21 +90,31 @@ BakeryLocationManager.prototype.renderSalesDataForLocation = function (parentEle
   }
 }
 
-BakeryLocationManager.prototype.renderCookieTotalPerHour = function(parentElement) {
+BakeryLocationManager.prototype.renderCookieTotalPerHour = function (parentElement) {
   // loop variables
   var cookieCountPerHour = 0;
-  
+
   //console.log(parentElement.rows[1].cells[1].innerHTML);
   //console.log(parentElement.rows[1].cells.length);
   //console.log(parentElement.rows.length);
 
   var rowElement = this.addElement('tr', parentElement);
   this.addElement('th', rowElement, 'Totals');
-  
-  for (var i = 1; i < parentElement.rows.length - 1; i++) {
+
+  /* for (var i = 1; i < parentElement.rows.length - 1; i++) {
     for (var j = 1; j < parentElement.rows[i].cells.length - 1; j++) {
       console.log(parentElement.rows[i].cells[j].innerHTML);
     }
+  } */
+
+  for (var i = 1; i < this.hoursOfOperation.length + 2; i++, cookieCountPerHour = 0) {
+    for (var j = 1; j < this.locationList.length + 1; j++) {
+      console.log(parentElement.rows[j].cells[i].innerHTML);
+      cookieCountPerHour += parseInt(parentElement.rows[j].cells[i].innerHTML)
+    }
+    //console.log(cookieCountPerHour);
+    this.addElement('td', rowElement, cookieCountPerHour);
+    cookieCountPerHour = 0;
   }
 
 }
