@@ -37,6 +37,14 @@ BakeryLocationManager.prototype.addLocation = function (locationName) {
   this.locationList.push(locationName);
 }
 
+// function creates a new element.  Returns newly created element
+BakeryLocationManager.prototype.addElement = function (tag, container, text) {
+  var newElement = document.createElement(tag);
+  newElement.textContent = text;
+  container.appendChild(newElement);
+  return newElement;
+}
+
 // function drives the rendering of sales data to html table
 BakeryLocationManager.prototype.renderSalesData = function () {
   // get parent container
@@ -65,7 +73,7 @@ BakeryLocationManager.prototype.renderHourHeader = function (parentElement) {
   this.addElement('th', rowElement, 'Daily Total Location');
 }
 
-// function creates a table data for sales data table.  Displays amount of cookies sold in an hour
+// function creates cookie sales figures for sales data table.  Displays amount of cookies sold in an hour
 BakeryLocationManager.prototype.renderSalesDataForLocation = function (parentElement) {
   // loop variables
   var rowElement;
@@ -90,41 +98,25 @@ BakeryLocationManager.prototype.renderSalesDataForLocation = function (parentEle
   }
 }
 
+// function creates total sales figures for each hour.  Displays total to table
 BakeryLocationManager.prototype.renderCookieTotalPerHour = function (parentElement) {
   // loop variables
   var cookieCountPerHour = 0;
 
-  //console.log(parentElement.rows[1].cells[1].innerHTML);
-  //console.log(parentElement.rows[1].cells.length);
-  //console.log(parentElement.rows.length);
-
+  // create row element and add to parent
   var rowElement = this.addElement('tr', parentElement);
+  // create heading for total cookie
   this.addElement('th', rowElement, 'Totals');
 
-  /* for (var i = 1; i < parentElement.rows.length - 1; i++) {
-    for (var j = 1; j < parentElement.rows[i].cells.length - 1; j++) {
-      console.log(parentElement.rows[i].cells[j].innerHTML);
-    }
-  } */
-
+  // traverse through the table by column.  Adds up total cookies per hour
   for (var i = 1; i < this.hoursOfOperation.length + 2; i++, cookieCountPerHour = 0) {
     for (var j = 1; j < this.locationList.length + 1; j++) {
       console.log(parentElement.rows[j].cells[i].innerHTML);
       cookieCountPerHour += parseInt(parentElement.rows[j].cells[i].innerHTML)
     }
-    //console.log(cookieCountPerHour);
+    // add total value to table
     this.addElement('td', rowElement, cookieCountPerHour);
-    cookieCountPerHour = 0;
   }
-
-}
-
-// Function creates a new element.  Returns newly created element
-BakeryLocationManager.prototype.addElement = function (tag, container, text) {
-  var newElement = document.createElement(tag);
-  newElement.textContent = text;
-  container.appendChild(newElement);
-  return newElement;
 }
 
 // Start program
