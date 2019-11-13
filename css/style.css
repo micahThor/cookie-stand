@@ -59,7 +59,7 @@ table {
   width: 100%; 
 }
 
-th, td {
+td {
   text-align: center;
   padding: 10px;
   border-bottom: 1px solid #EFE7BC;
