@@ -20,6 +20,7 @@ function BakeryLocation(name, minCustomer, maxCustomer, avgSale) {
   this.avgSale = avgSale;
 }
 
+// function returns a random number between min and max customer count multiplied times the average daily sales
 BakeryLocation.prototype.getRandomCookies = function () {
   return Math.ceil(Math.floor(Math.random() * (this.maxCustomer - this.minCustomer + 1) + this.minCustomer) * this.avgSale);;
 }
@@ -111,7 +112,6 @@ BakeryLocationManager.prototype.renderCookieTotalPerHour = function (parentEleme
   // traverse through the table by column.  Adds up total cookies per hour
   for (var i = 1; i < this.hoursOfOperation.length + 2; i++, cookieCountPerHour = 0) {
     for (var j = 1; j < this.locationList.length + 1; j++) {
-      console.log(parentElement.rows[j].cells[i].innerHTML);
       cookieCountPerHour += parseInt(parentElement.rows[j].cells[i].innerHTML)
     }
     // add total value to table
