@@ -34,14 +34,6 @@ header > h2 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#logoHR {
-  position: absolute;
-  top: 14vh;
-  left: 5vw;
-  width: 18vw;
-  border: 1px solid #fa9d9d;
-}
-
 header > hr {
   position: absolute;
   top: 14vh;
@@ -79,11 +71,10 @@ body {
   background-color: #A3CBF1;
 }
 
-body h1 {
-  margin-top: 15px;
-  margin-bottom: 10px;
+body > h1 {
+  position: absolute;
+  top: 10vh;
   left: 25%;
-  right: 25%;
   text-align: center;
   font-family: 'Abril Fatface', cursive;
   text-shadow: -1px 0 #A3CBF1, 0 5px #A3CBF1, 2px 0 #A3CBF1, 0 -1px #A3CBF1;
@@ -92,6 +83,9 @@ body h1 {
 }
 
 table {
+  position: absolute;
+  top: 40vh;
+  left: 0;
   background: #A3CBF1;
   table-layout: auto;
   width: 100%; 
