@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Salmon Cookies Co</title>
-    <header>
-      <h2>Salmon Cookies Company</h2>
-      <img id="logoSalmon" src="img/salmonLogo.png" alt="Salmon Cookie Co Logo">
-      <hr>
-      <img id="headerCookie" src="img/frosted-cookie.jpg" alt="Our World Famous Salmon Cookie">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="sales.html">Sales Projection</a></li>
-        </ul>
-      </nav>
-    </header>
-  </head>
+
+<head>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Salmon Cookies Co</title>
+</head>
+
 
 <body>
-  <h1>Sales By Location</h1>
-  <article id="salesDataTable">
 
-  </article>
+  <header>
+    <h2>Salmon Cookies Company</h2>
+    <img id="logoSalmon" src="img/salmonLogo.png" alt="Salmon Cookie Co Logo">
+    <hr>
+    <img id="headerCookie" src="img/frosted-cookie.jpg" alt="Our World Famous Salmon Cookie">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sales.html">Sales Projection</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Sales By Location</h1>
+    <form id="locationForm">
+      <fieldset>
+        <legend>Add Location</legend>
+        <label>
+          Location Name<br>
+          <input name="locationName" type="text" />
+        </label>
+        <label>
+          Min Daily Customer<br>
+          <input name="minCustomers" type="number" />
+        </label>
+        <label>
+          Max Daily Customer<br>
+          <input name="maxCustomers" type="number" />
+        </label>
+        <label>
+          Avg Sale Per Customer<br>
+          <input name="avgSalePerCustomer" type="float" />
+        </label>
+      </fieldset>
+      <button>Submit</button>
+    </form>
+    <article id="salesDataTable"></article>
+  </main>
 
   <script src="js/app.js"></script>
 </body>

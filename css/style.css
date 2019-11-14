@@ -4,7 +4,7 @@
 
 header > h2 {
   position: absolute;
-  top: 8vh;
+  top: 12vh;
   left: 5vw;
   text-align: center;
   font-family: 'Abril Fatface', cursive;
@@ -13,7 +13,7 @@ header > h2 {
   color: #fa9d9d;
 }
 
-#logoSalmon  {
+#logoSalmon {
   position: absolute;
   max-height: 30vh;
   max-width: 30vw;
@@ -44,36 +44,34 @@ header > hr {
 
 nav {
   position: absolute;
-  top: 0vh;
-  left: 30vw;
+  top: 5vh;
+  left: 35vw;
   text-align: center;
-  margin: 20px;
-  padding: 10px;
   }
-  
-nav ul {
-  list-style: none;
-  margin: 2px;
-  padding: 0;
-}
   
 nav li {
   display: inline-block;
   margin: 50px;
-  padding: 5px 5px;
 }
   
 nav a {
-  padding: 10px 5px;
+  text-decoration: none;
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 50%;
 }
 
 body {
   background-color: #A3CBF1;
 }
 
-body > h1 {
+main > h1 {
   position: absolute;
-  top: 10vh;
+  top: 20vh;
   left: 25%;
   text-align: center;
   font-family: 'Abril Fatface', cursive;
@@ -84,7 +82,7 @@ body > h1 {
 
 table {
   position: absolute;
-  top: 40vh;
+  top: 50vh;
   left: 0;
   background: #A3CBF1;
   table-layout: auto;
@@ -100,4 +98,27 @@ td {
   padding: 10px;
   font-family: 'Abril Fatface', cursive; 
   border-bottom: 1px solid #EFE7BC;
+}
+
+form {
+  position: absolute;
+  top: 35vh;
+  left: 25%;
+  border: 1px solid;
+}
+
+form legend {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+form label {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+form button {
+  margin-top: 10px;
+  float: right;
 }
