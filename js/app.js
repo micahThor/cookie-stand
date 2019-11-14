@@ -1,13 +1,29 @@
 'use strict';
 
 function main() {
-  // create new location manager and add locations
+  // create new location manager and add default locations
   var locationMgr = new BakeryLocationManager();
   locationMgr.addLocation(new BakeryLocation('Seattle', 23, 65, 6.3));
   locationMgr.addLocation(new BakeryLocation('Tokyo', 3, 24, 1.2));
   locationMgr.addLocation(new BakeryLocation('Dubai', 11, 38, 3.7));
   locationMgr.addLocation(new BakeryLocation('Paris', 20, 38, 2.3));
   locationMgr.addLocation(new BakeryLocation('Lima', 2, 16, 4.6));
+
+  // get form element and add event listener
+  // with each submit, a new location is added to table
+  var form = document.getElementById('locationForm');
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    // create new Location
+    var newLocation = new BakeryLocation(event.target.locationName.value, parseInt(event.target.minCustomers.value), parseInt(event.target.maxCustomers.value), parseFloat(event.target.avgSalePerCustomer.value));
+    // add location to manager
+    locationMgr.addLocation(newLocation);
+    // render sales data with new location
+    locationMgr.renderSalesData();
+    // reset form fields
+    event.target.reset();
+  });
+
   // render table with data
   locationMgr.renderSalesData();
 }
@@ -84,6 +100,7 @@ BakeryLocationManager.prototype.renderTableBody = function (parentElement) {
   var randomCookieAmt;
   var cookieCounterPerLocation = 0;
 
+  // Html element variable
   var tableBodyElement = this.addElement('tbody', parentElement);
 
   // populate each row with cell data for each location
@@ -117,7 +134,7 @@ BakeryLocationManager.prototype.renderTableFooter = function (parentElement) {
   this.addElement('th', rowElement, 'Totals');
 
   // traverse through the table by column.  Adds up total cookies per hour
-  for (var i = 1; i < this.hoursOfOperation.length + 2; i++, cookieCountPerHour = 0) {
+  for (var i = 1; i < this.hoursOfOperation.length + 2; i++ , cookieCountPerHour = 0) {
     for (var j = 1; j < this.locationList.length + 1; j++) {
       cookieCountPerHour += parseInt(parentElement.rows[j].cells[i].innerHTML)
     }
