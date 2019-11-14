@@ -2,47 +2,81 @@
   box-sizing: border-box;
 }
 
-head {
-  position: relative;
-}
-
-header {
-  margin-top: 40px;
-  background-color:  #EFE7BC;
-  height: 200px;
-  border-radius: 25px;
-  margin-left: 10%;
-  margin-right: 10%;
-  box-shadow: 15px 15px #74BDCB;
-  border-radius: 80%;
-  z-index: -1;
-  border-style: solid;
-  border-width: 2px;
-}
-
-header h2 {
+header > h2 {
   position: absolute;
-  z-index: 1;
-  left: 25%;
-  right:25%;
-  top: 50px;
-  height: 100px;
+  top: 8vh;
+  left: 5vw;
   text-align: center;
   font-family: 'Abril Fatface', cursive;
-  text-shadow: -1px 0 #EFE7BC, 0 5px #EFE7BC, 2px 0 #EFE7BC, 0 -1px #EFE7BC;
-  font-size: 60px;
+  text-shadow: 2px 2px 8px #FF0000;
+  font-size: 25px;
   color: #fa9d9d;
 }
 
-#logo {
+#logoSalmon  {
   position: absolute;
-  top: 0;
-  right: 25%;
-  left: 25%;
+  max-height: 30vh;
+  max-width: 30vw;
+  top: 3vh;
+  left: 0;
+  height: auto;
+  width: auto;
+  z-index: -1;
+}
+
+#headerCookie {
+  position: absolute;
+  top: 3vh;
+  left: 75%;
+  max-height: 30vh;
+  max-width: 30vw;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#logoHR {
+  position: absolute;
+  top: 14vh;
+  left: 5vw;
+  width: 18vw;
+  border: 1px solid #fa9d9d;
+}
+
+header > hr {
+  position: absolute;
+  top: 14vh;
+  left: 30vw;
+  width: 90%;
+  border: 2px solid #fa9d9d;
+}
+
+nav {
+  position: absolute;
+  top: 0vh;
+  left: 30vw;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  }
+  
+nav ul {
+  list-style: none;
+  margin: 2px;
+  padding: 0;
+}
+  
+nav li {
+  display: inline-block;
+  margin: 50px;
+  padding: 5px 5px;
+}
+  
+nav a {
+  padding: 10px 5px;
 }
 
 body {
-  background-color: #fa9d9d;
+  background-color: #A3CBF1;
 }
 
 body h1 {
