@@ -4,13 +4,13 @@
 
 header > h2 {
   position: absolute;
-  top: 12vh;
-  left: 5vw;
+  top: 11.5vh;
+  left: 4vw;
   text-align: center;
   font-family: 'Abril Fatface', cursive;
-  text-shadow: 2px 2px 8px #FF0000;
-  font-size: 25px;
-  color: #fa9d9d;
+  text-shadow: 2px 2px 2px black;
+  font-size: 30px;
+  color: #F97D81;
 }
 
 #logoSalmon {
@@ -39,7 +39,7 @@ header > hr {
   top: 14vh;
   left: 30vw;
   width: 90%;
-  border: 2px solid #fa9d9d;
+  border: 2px solid #F97D81;
 }
 
 nav {
@@ -60,6 +60,7 @@ nav a {
   color: white;
   padding: 14px 25px;
   text-align: center;
+  font-family: 'Amatic SC', cursive;
   text-decoration: none;
   display: inline-block;
   border-radius: 50%;
@@ -71,54 +72,65 @@ body {
 
 main > h1 {
   position: absolute;
-  top: 20vh;
+  top: 22vh;
   left: 25%;
+  right: 25%;
   text-align: center;
-  font-family: 'Abril Fatface', cursive;
-  text-shadow: -1px 0 #A3CBF1, 0 5px #A3CBF1, 2px 0 #A3CBF1, 0 -1px #A3CBF1;
+  font-family: 'Amatic SC', cursive;
+  text-shadow: -1px 0 #EFE7BC, 0 5px #EFE7BC, 2px 0 #EFE7BC, 0 -1px #EFE7BC;
   font-size: 80px;
-  color: #EFE7BC;
+  color: #29264E;
+}
+
+form {
+  position: absolute;
+  top: 40vh;
+  left: 25%;
+  right: 25%;
+  font-family: 'Alatsi', sans-serif;
+}
+
+form legend {
+  text-decoration-line: underline;
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 2px;
+}
+
+form label {
+  display: inline-block;
+  margin-left: 5px;
+  text-align: center;
+  padding: 10px 10px;
+  margin-top: 5px;
+}
+
+form input {
+  margin-top: 2px;
+}
+
+form button {
+  background-color: #29264E;
+  color: white;
+  padding: 12px 20px; 
+  border-radius: 4px;
 }
 
 table {
   position: absolute;
-  top: 50vh;
-  left: 0;
+  top: 62vh;
   background: #A3CBF1;
   table-layout: auto;
   width: 100%; 
 }
 
 th {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Alatsi', sans-serif;
 }
 
 td {
   text-align: center;
   padding: 10px;
-  font-family: 'Abril Fatface', cursive; 
+  font-family: 'Alatsi', sans-serif; 
   border-bottom: 1px solid #EFE7BC;
-}
-
-form {
-  position: absolute;
-  top: 35vh;
-  left: 25%;
-  border: 1px solid;
-}
-
-form legend {
-  text-align: center;
-  padding-bottom: 10px;
-}
-
-form label {
-  display: inline-block;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-form button {
-  margin-top: 10px;
-  float: right;
 }
