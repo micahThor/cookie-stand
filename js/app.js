@@ -13,15 +13,23 @@ function main() {
   // with each submit, a new location is added to table
   var form = document.getElementById('locationForm');
   form.addEventListener('submit', function (event) {
+    // get inputs from form event
+    var locationName = event.target.locationName.value;
+    var minCustomers = parseInt(event.target.minCustomers.value);
+    var maxCustomers = parseInt(event.target.maxCustomers.value);
+    var avgCustomerPurchase = parseFloat(event.target.avgSalePerCustomer.value);
+
+
     event.preventDefault();
     // create new Location
-    var newLocation = new BakeryLocation(event.target.locationName.value, parseInt(event.target.minCustomers.value), parseInt(event.target.maxCustomers.value), parseFloat(event.target.avgSalePerCustomer.value));
+    var newLocation = new BakeryLocation(locationName, minCustomers, maxCustomers, avgCustomerPurchase);
     // add location to manager
     locationMgr.addLocation(newLocation);
     // render sales data with new location
     locationMgr.renderSalesData();
     // reset form fields
     event.target.reset();
+
   });
 
   // render table with data
@@ -134,9 +142,9 @@ BakeryLocationManager.prototype.renderTableFooter = function (parentElement) {
   this.addElement('th', rowElement, 'Totals');
 
   // traverse through the table by column.  Adds up total cookies per hour
-  for (var i = 1; i < this.hoursOfOperation.length + 2; i++ , cookieCountPerHour = 0) {
-    for (var j = 1; j < this.locationList.length + 1; j++) {
-      cookieCountPerHour += parseInt(parentElement.rows[j].cells[i].innerHTML)
+  for (var hour = 1; hour < this.hoursOfOperation.length + 2; hour++ , cookieCountPerHour = 0) {
+    for (var location = 1; location < this.locationList.length + 1; location++) {
+      cookieCountPerHour += parseInt(parentElement.rows[location].cells[hour].innerHTML)
     }
     // add total value to table
     this.addElement('td', rowElement, cookieCountPerHour);
