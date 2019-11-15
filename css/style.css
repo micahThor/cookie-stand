@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-header > h2 {
+header h2 {
   position: absolute;
   top: 11.5vh;
   left: 4vw;
@@ -61,6 +61,7 @@ nav a {
   padding: 14px 25px;
   text-align: center;
   font-family: 'Amatic SC', cursive;
+  font-size: 20px;
   text-decoration: none;
   display: inline-block;
   border-radius: 50%;
@@ -70,7 +71,7 @@ body {
   background-color: #A3CBF1;
 }
 
-main > h1 {
+main h1 {
   position: absolute;
   top: 22vh;
   left: 25%;
@@ -84,25 +85,28 @@ main > h1 {
 
 form {
   position: absolute;
+  width: 100%;
   top: 40vh;
-  left: 25%;
-  right: 25%;
   font-family: 'Alatsi', sans-serif;
 }
 
 form legend {
   text-decoration-line: underline;
   text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
   font-size: 25px;
   padding-bottom: 2px;
 }
 
 form label {
+  position: relative;
   display: inline-block;
   margin-left: 5px;
   text-align: center;
-  padding: 10px 10px;
+  padding: 5px 5px;
   margin-top: 5px;
+  left: 25%;
 }
 
 form input {
@@ -110,6 +114,8 @@ form input {
 }
 
 form button {
+  position: relative;
+  left: 25%;
   background-color: #29264E;
   color: white;
   padding: 12px 20px; 
@@ -118,19 +124,20 @@ form button {
 
 table {
   position: absolute;
-  top: 62vh;
+  top: 58vh;
+  width: 100%;
   background: #A3CBF1;
-  table-layout: auto;
-  width: 100%; 
 }
 
-th {
+thead, th {
+  font-weight: bold;
   font-family: 'Alatsi', sans-serif;
+  margin-bottom: 10px;
 }
 
 td {
   text-align: center;
   padding: 10px;
-  font-family: 'Alatsi', sans-serif; 
-  border-bottom: 1px solid #EFE7BC;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 2px solid #EFE7BC;
 }

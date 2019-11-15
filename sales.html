@@ -18,10 +18,11 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="sales.html">Sales Projection</a></li>
+        <li><a href="sales.html">Sales Projections</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
     <h1>Sales By Location</h1>
     <form id="locationForm">
@@ -29,19 +30,19 @@
         <legend>Add Location</legend>
         <label>
           Location Name<br>
-          <input name="locationName" type="text" />
+          <input name="locationName" type="text" required>
         </label>
         <label>
           Min Daily Customers<br>
-          <input name="minCustomers" type="number" />
+          <input name="minCustomers" type="number" required>
         </label>
         <label>
           Max Daily Customers<br>
-          <input name="maxCustomers" type="number" />
+          <input name="maxCustomers" type="number" required>
         </label>
         <label>
           Avg Sale Per Customer<br>
-          <input name="avgSalePerCustomer" type="float" />
+          <input name="avgSalePerCustomer" type="float" required>
         </label>
         <button>Submit</button>
       </fieldset>
