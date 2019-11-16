@@ -19,7 +19,8 @@ function main() {
     var maxCustomers = parseInt(event.target.maxCustomers.value);
     var avgCustomerPurchase = parseFloat(event.target.avgSalePerCustomer.value);
 
-
+    document.getElementById(locationMgr.tableElementId).innerHTML = "";
+    
     event.preventDefault();
     // create new Location
     var newLocation = new BakeryLocation(locationName, minCustomers, maxCustomers, avgCustomerPurchase);
@@ -29,7 +30,6 @@ function main() {
     locationMgr.renderSalesData();
     // reset form fields
     event.target.reset();
-
   });
 
   // render table with data
