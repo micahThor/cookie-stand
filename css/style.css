@@ -2,68 +2,59 @@
   box-sizing: border-box;
 }
 
+header {
+  display: inline-block;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+}
+
 header h2 {
-  position: absolute;
-  top: 11.5vh;
-  left: 4vw;
-  text-align: center;
   font-family: 'Abril Fatface', cursive;
   text-shadow: 2px 2px 2px black;
-  font-size: 30px;
+  font-size: 36px;
   color: #F97D81;
 }
 
-#logoSalmon {
-  position: absolute;
-  max-height: 30vh;
-  max-width: 30vw;
-  top: 3vh;
-  left: 0;
-  height: auto;
-  width: auto;
-  z-index: -1;
+#salmonLogoImage {
+  width: 500px;
 }
 
-#headerCookie {
-  position: absolute;
-  top: 3vh;
-  left: 75%;
-  max-height: 30vh;
-  max-width: 30vw;
+#frostedCookieImage {
+  float: right;
+  width: 250px;
   border-radius: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-header > hr {
-  position: absolute;
-  top: 14vh;
-  left: 30vw;
-  width: 90%;
-  border: 2px solid #F97D81;
-}
-
 nav {
   position: absolute;
-  top: 5vh;
-  left: 35vw;
+  width: 80%;
   text-align: center;
-  }
-  
-nav li {
-  display: inline-block;
-  margin: 50px;
+  z-index: 1;
 }
-  
-nav a {
+
+hr {
+  position: absolute;
+  width: 80%;
+  border: 5px solid #F97D81;
+}
+
+li {
+  display: inline;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+li a {
   text-decoration: none;
   background-color: #f44336;
   color: white;
-  padding: 14px 25px;
+  padding: 5px 5px;
   text-align: center;
   font-family: 'Amatic SC', cursive;
   font-size: 20px;
-  text-decoration: none;
-  display: inline-block;
   border-radius: 50%;
 }
 
@@ -71,11 +62,15 @@ body {
   background-color: #A3CBF1;
 }
 
+main {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 main h1 {
-  position: absolute;
-  top: 22vh;
-  left: 25%;
-  right: 25%;
+  margin-top: 5%;
+  margin-bottom: 2%;
   text-align: center;
   font-family: 'Amatic SC', cursive;
   text-shadow: -1px 0 #EFE7BC, 0 5px #EFE7BC, 2px 0 #EFE7BC, 0 -1px #EFE7BC;
@@ -83,10 +78,22 @@ main h1 {
   color: #29264E;
 }
 
+main h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #f44336;
+}
+
+main #familyImage {
+  width: 400px;
+  float: right;
+}
+
 form {
-  position: absolute;
-  width: 100%;
-  top: 40vh;
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 25px;
   font-family: 'Alatsi', sans-serif;
 }
 
@@ -96,17 +103,14 @@ form legend {
   margin-left: 25%;
   margin-right: 25%;
   font-size: 25px;
-  padding-bottom: 2px;
+  margin-bottom: 20px;
 }
 
 form label {
-  position: relative;
   display: inline-block;
-  margin-left: 5px;
   text-align: center;
-  padding: 5px 5px;
   margin-top: 5px;
-  left: 25%;
+  margin-left: 3%;
 }
 
 form input {
@@ -114,8 +118,7 @@ form input {
 }
 
 form button {
-  position: relative;
-  left: 25%;
+  margin-top: 5px;
   background-color: #29264E;
   color: white;
   padding: 12px 20px; 
@@ -123,9 +126,8 @@ form button {
 }
 
 table {
-  position: absolute;
-  top: 58vh;
   width: 100%;
+  margin: 0 auto;
   background: #A3CBF1;
 }
 
@@ -140,4 +142,18 @@ td {
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
   border-bottom: 2px solid #EFE7BC;
+}
+
+#addressLocations h4 {
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  text-decoration-line: underline;
+  font-size: 26px;
+}
+
+#addressLocations address {
+  margin-bottom: 2%;
+  margin-left: 10%;
+  font-size: 18px;
 }
